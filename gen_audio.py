@@ -11,7 +11,7 @@ def generar_tono(frecuencia, duracion_ms, volumen_db):
 # Parámetros ajustables
 duracion_tono_ms = 300        # Duración de cada tono en milisegundos
 intervalo_ms = 600            # Intervalo entre tonos en milisegundos
-duracion_total_ms = 60000     # Duración total del experimento en milisegundos
+duracion_total_ms = 6000     # Duración total del experimento en milisegundos
 volumen_db = -20              # Volumen en decibelios (-60 a 0 dBFS)
 
 # Frecuencias para los tonos
@@ -49,4 +49,4 @@ while tiempo_actual < duracion_total_ms:
 secuencia = secuencia[:duracion_total_ms]
 
 # Guardar el archivo de audio
-secuencia.export("experimento_oddball.wav", format="wav")
+secuencia.export("oddball_short.wav", format="wav")
