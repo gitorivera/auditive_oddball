@@ -23,11 +23,11 @@ def generar_pulsos(num_pulsos, duracion_pulso_ms, duracion_total_ms, sincronizac
 # Parámetros
 duracion_tono_ms = 300  # Duración de cada tono en milisegundos
 intervalo_ms = 600  # Intervalo entre tonos en milisegundos
-duracion_total_ms = 60000  # Duración total del experimento en milisegundos
+duracion_total_ms = 6000  # Duración total del experimento en milisegundos
 volumen_db = -20  # Volumen de los tonos en decibelios
 
-frecuencia_frecuente = 500    # Frecuencia del tono frecuente
-frecuencia_objetivo = 1500    # Frecuencia del tono objetivo
+frecuencia_frecuente = 2000    # Frecuencia del tono frecuente
+frecuencia_objetivo = 500    # Frecuencia del tono objetivo
 frecuencia_distractor = 1000  # Frecuencia del tono distractor
 
 probabilidad_frecuente = 0.6
@@ -81,4 +81,4 @@ secuencia_estereo = AudioSegment.from_mono_audiosegments(secuencia_izquierda, se
 
 
 # Exportar el archivo estéreo
-secuencia_estereo.export("dataset/experimento_oddball_estereo_sync.wav", format="wav", parameters=["-ar", "44100", "-ac", "2", "-sample_fmt", "s16"])
+secuencia_estereo.export("dataset/oddball_short.wav", format="wav", parameters=["-ar", "44100", "-ac", "2", "-sample_fmt", "s16"])
